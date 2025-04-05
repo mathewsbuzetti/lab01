@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "subscriptionId": {
+      "value": ""
+    },
+    "clientNameUpper": {
+      "value": ""
+    },
+    "clientNameLower": {
+      "value": ""
+    },
+    "environment": {
+      "value": "prod"
+    },
+    "vmName": {
+      "value": ""
+    },
+    "secondVMName": {
+      "value": ""
+    },
+    "criarSegundaVM": {
+      "value": false
+    },
+    "instalarVPN": {
+      "value": false
+    },
+    "vmUsername": {
+      "value": ""
+    },
+    "vmPassword": {
+      "reference": {
+        "keyVault": {
+          "id": ""
+        },
+        "secretName": "vmPassword"
+      }
+    },
+    "vNetIPRange": {
+      "value": "10.0.0.0/16"
+    },
+    "subnetInternalIPRange": {
+      "value": "10.0.1.0/24"
+    },
+    "gatewaySubnetIPRange": {
+      "value": "10.0.0.0/24"
+    }
+  }
+}
